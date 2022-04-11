@@ -42,6 +42,43 @@ const App=()=>{
 
 ```
 
-> screenshot
+> screenshot 1
 
 ![screenshot](screenshot.png)
+
+3. use offcanvas
+
+```tsx
+import { OffCanvas , Button } from 'react-tailwind-modal';
+
+const App=()=>{
+  const [show, setShow] = useState(false)
+
+  return <div>
+    <Button title='Open Left Off Canvas' onClick={() => setShow(true)} type="fill" />
+    <Button title='Open Right Off Canvas' onClick={() => setShow(true)} type="fill" />
+
+    <OffCanvas
+      title='Left Modal'
+      show={show}
+      setShow={setShow}
+    >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
+    </OffCanvas>
+
+    <OffCanvas
+      title='Right Modal'
+      position='right'
+      show={show}
+      setShow={setShow}
+    >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
+    </OffCanvas>
+  </div>
+}
+
+```
+
+> screenshot 2
+
+![screenshot](screenshot-canvas.png)
