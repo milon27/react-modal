@@ -5,7 +5,7 @@ Compitable with react js and next js.
 ## Installation Commands
 
 ```bash
-npm install react-tailwind-modal
+npm install @milon27/react-modal
 ```
 
 ### How to use
@@ -13,12 +13,12 @@ npm install react-tailwind-modal
 1. import css in index.js/ts or app.jsx or app.tsx. (if tailwind project import it after main tailwind css)
 
 ```ts
-import 'react-tailwind-modal/dist/style.css';
+import '@milon27/react-modal/dist/style.css';
 ```
 2. use the simple modal
 
 ```tsx
-import { Modal,Button } from 'react-tailwind-modal';
+import { Modal,Button } from '@milon27/react-modal';
 
 const App=()=>{
   const [show, setShow] = useState(false)
@@ -50,7 +50,7 @@ const App=()=>{
 3. use offcanvas
 
 ```tsx
-import { OffCanvas , Button } from 'react-tailwind-modal';
+import { OffCanvas , Button } from '@milon27/react-modal';
 
 const App=()=>{
   const [show, setShow] = useState(false)

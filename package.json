@@ -21,8 +21,7 @@
         "analyze": "size-limit --why",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "pub": "npm publish --access public",
-        "rename": "pkg-rename react-tailwind-modal --publish --access public"
+        "pub": "npm publish --access public"
     },
     "peerDependencies": {
         "react": ">=16"
@@ -76,7 +75,6 @@
         "@storybook/addon-postcss": "^2.0.0",
         "@storybook/addons": "^6.4.19",
         "@storybook/react": "^6.4.19",
-        "@tiaanduplessis/pkg-rename": "^1.0.1",
         "@types/react": "^17.0.43",
         "@types/react-dom": "^17.0.14",
         "autoprefixer": "^10.4.4",
