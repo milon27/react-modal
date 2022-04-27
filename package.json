@@ -21,12 +21,12 @@
         "analyze": "size-limit --why",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "pub": "npm publish --access public"
+        "pub": "npm publish --access public",
+        "rename": "pkg-rename react-tailwind-modal --publish --access public"
     },
     "peerDependencies": {
         "react": ">=16"
     },
-    "dependencies": {},
     "husky": {
         "hooks": {
             "pre-commit": "tsdx lint"
@@ -38,7 +38,7 @@
         "singleQuote": true,
         "trailingComma": "es5"
     },
-    "name": "react-tailwind-modal",
+    "name": "@milon27/react-modal",
     "author": {
         "name": "milon27",
         "email": "immilon27@gmail.com",
@@ -54,16 +54,16 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/milon27/react-tailwind-modal"
+        "url": "https://github.com/milon27/react-modal"
     },
-    "module": "dist/react-tailwind-modal.esm.js",
+    "module": "dist/react-modal.esm.js",
     "size-limit": [
         {
-            "path": "dist/react-tailwind-modal.cjs.production.min.js",
+            "path": "dist/react-modal.cjs.production.min.js",
             "limit": "10 KB"
         },
         {
-            "path": "dist/react-tailwind-modal.esm.js",
+            "path": "dist/react-modal.esm.js",
             "limit": "10 KB"
         }
     ],
@@ -76,6 +76,7 @@
         "@storybook/addon-postcss": "^2.0.0",
         "@storybook/addons": "^6.4.19",
         "@storybook/react": "^6.4.19",
+        "@tiaanduplessis/pkg-rename": "^1.0.1",
         "@types/react": "^17.0.43",
         "@types/react-dom": "^17.0.14",
         "autoprefixer": "^10.4.4",
