@@ -6,9 +6,10 @@ interface iCanvas {
     show: boolean
     setShow: React.Dispatch<React.SetStateAction<boolean>>
     position?: "left" | "right"
+    onClose?: () => void
 }
 
-export default function OffCanvas({ show, title, setShow, position = "left", children }: iCanvas) {
+export default function OffCanvas({ show, title, setShow, onClose = () => { }, position = "left", children }: iCanvas) {
 
     const common = "fixed bottom-0 flex flex-col max-w-full bg-white  bg-clip-padding  outline-none transition duration-500 ease-in-out text-gray-700 top-0 border-none w-64 md:w-80 shadow-xl z-[1200]"
 
@@ -23,6 +24,7 @@ export default function OffCanvas({ show, title, setShow, position = "left", chi
 
     const hide = () => {
         setShow(false)
+        onClose()
     }
 
     return (

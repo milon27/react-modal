@@ -34,6 +34,7 @@ const App=()=>{
         <Button title='Cancel' onClick={() => setShow(false)} />
         <Button title='Done' onClick={() => setShow(false)} type="fill" />
       </>}
+      onClose={() => { console.log("closing the modal") }} //optional
     >
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
     </Modal>
@@ -62,6 +63,7 @@ const App=()=>{
       title='Left Modal'
       show={show}
       setShow={setShow}
+      onClose={() => { console.log("closing the OffCanvas") }} //optional
     >
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
     </OffCanvas>
