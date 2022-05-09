@@ -37,6 +37,8 @@ export const OffCanvasModal = () => {
 
   return <>
     <Button title='Open Left Off Canvas' onClick={() => setShow(true)} type="fill" />
+    <br />
+    <br />
     <Button title='Open Right Off Canvas' onClick={() => setShow(true)} type="fill" />
 
     <OffCanvas
