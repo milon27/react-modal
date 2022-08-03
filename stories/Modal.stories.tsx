@@ -17,12 +17,12 @@ export const SimpleModal = () => {
     <Modal
       title='Simple Modal'
       show={show}
-      setShow={setShow}
       footer={<>
         <Button title='Cancel' onClick={() => setShow(false)} />
         <Button title='Done' onClick={() => setShow(false)} type="fill" />
       </>}
       onClose={() => {
+        setShow(false)
         console.log("closing the modal");
       }}
     >
