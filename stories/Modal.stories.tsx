@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
 import { Modal, OffCanvas } from '../src';
-import Button from './Button';
 
 const meta: Meta = {
   title: 'Components'
@@ -40,6 +39,7 @@ export const SimpleModal = () => {
       show={showContent}
       footer={null}
       className="rm-bg-green-600"
+      bgStyleClassName="rm-bg-black-600 rm-bg-opacity-10"
       onClose={() => {
         setShowContent(false)
         console.log("closing the modal");
@@ -78,4 +78,27 @@ export const OffCanvasModal = () => {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
     </OffCanvas>
   </>
+}
+
+
+interface iButton {
+  title: string,
+  onClick: () => void
+  type?: "fill" | "outline"
+}
+function Button({ title, onClick, type = "outline" }: iButton) {
+  if (type === "outline") {
+    return (
+      <button
+        className='rm-px-5 rm-py-2.5 rm-rounded-md rm-text-sm rm-text-gray-700 rm-border hover:rm-bg-gray-50'
+        onClick={onClick}
+      >{title}</button>
+    )
+  }
+  return (
+    <button
+      className='rm-px-5 rm-py-2.5 rm-rounded-md rm-text-sm rm-text-white rm-bg-gray-700 hover:rm-bg-gray-800'
+      onClick={onClick}
+    >{title}</button>
+  )
 }

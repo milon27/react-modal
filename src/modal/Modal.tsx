@@ -9,12 +9,13 @@ interface iModal {
     footer: React.ReactNode
     onClose?: () => void
     className?: string
+    bgStyleClassName?: string
 }
 
 export default function Modal({ hideTitle = false, dismissible = true, show = false, onClose = () => { },
-    title, children, footer, className = "" }: iModal) {
+    title, children, footer, className = "", bgStyleClassName = "" }: iModal) {
     return (
-        <div className={show === true ? " rm-bg-slate-900 rm-flex rm-bg-opacity-60 rm-overflow-y-auto rm-overflow-x-hidden rm-fixed rm-right-0 rm-left-0 rm-top-0 rm-bottom-0 rm-z-50 rm-justify-center rm-items-center md:rm-h-full md:rm-inset-0" : "rm-hidden"}>
+        <div className={show === true ? ` rm-bg-slate-900 rm-flex rm-bg-opacity-60 rm-overflow-y-auto rm-overflow-x-hidden rm-fixed rm-right-0 rm-left-0 rm-top-0 rm-bottom-0 rm-z-50 rm-justify-center rm-items-center md:rm-h-full md:rm-inset-0 ${bgStyleClassName}` : "rm-hidden"}>
             <div className="rm-relative rm-px-4 rm-w-max rm-min-w-[350px] md:rm-min-w-[450px] rm-max-w-6xl rm-max-h-[85vh] md:rm-h-auto">
                 {/* Modal content */}
                 <div className={`rm-relative rm-bg-slate-200 rm-rounded-lg rm-shadow ${className}`}>
