@@ -34,10 +34,7 @@ export const SimpleModal = () => {
     <Button title='Open only Content Modal' onClick={() => setShowContent(true)} type="fill" />
 
     <Modal
-      hideTitle
-      title='no header modal'
       show={showContent}
-      footer={null}
       className="rm-bg-green-600"
       bgStyleClassName="rm-bg-black-600 rm-bg-opacity-10"
       contentStyleClassName=''

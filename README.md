@@ -42,13 +42,10 @@ const App=()=>{
     <Button title='Open only Content Modal' onClick={() => setShowContent(true)} type="fill" />
 
     <Modal
-      hideTitle
-      title='no header modal'
       show={showContent}
-      footer={null}
       className="rm-bg-green-600"
-      bgStyleClassName="rm-bg-green-600"
-      contentStyleClassName="rm-bg-green-600"
+      bgStyleClassName="rm-bg-black-600 rm-bg-opacity-10"
+      contentStyleClassName=''
       onClose={() => {
         setShowContent(false)
         console.log("closing the modal");
