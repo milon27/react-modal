@@ -40,6 +40,7 @@ export const SimpleModal = () => {
       footer={null}
       className="rm-bg-green-600"
       bgStyleClassName="rm-bg-black-600 rm-bg-opacity-10"
+      contentStyleClassName=''
       onClose={() => {
         setShowContent(false)
         console.log("closing the modal");

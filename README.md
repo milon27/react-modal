@@ -47,6 +47,8 @@ const App=()=>{
       show={showContent}
       footer={null}
       className="rm-bg-green-600"
+      bgStyleClassName="rm-bg-green-600"
+      contentStyleClassName="rm-bg-green-600"
       onClose={() => {
         setShowContent(false)
         console.log("closing the modal");
