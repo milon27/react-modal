@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Meta } from '@storybook/react';
-import { Modal, Button, OffCanvas } from '../src';
+import { Modal, OffCanvas } from '../src';
+import Button from './Button';
 
 const meta: Meta = {
   title: 'Components'
@@ -10,6 +11,7 @@ export default meta;
 
 export const SimpleModal = () => {
   const [show, setShow] = useState(false)
+  const [showContent, setShowContent] = useState(false)
   return <>
 
     <Button title='Open Modal' onClick={() => setShow(true)} type="fill" />
@@ -23,6 +25,23 @@ export const SimpleModal = () => {
       </>}
       onClose={() => {
         setShow(false)
+        console.log("closing the modal");
+      }}
+    >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
+    </Modal>
+
+
+    <Button title='Open only Content Modal' onClick={() => setShowContent(true)} type="fill" />
+
+    <Modal
+      hideTitle
+      title='no header modal'
+      show={showContent}
+      footer={null}
+      className="rm-bg-green-600"
+      onClose={() => {
+        setShowContent(false)
         console.log("closing the modal");
       }}
     >
