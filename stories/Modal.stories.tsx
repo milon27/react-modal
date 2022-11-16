@@ -43,7 +43,7 @@ export const SimpleModal = () => {
         console.log("closing the modal");
       }}
     >
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
+      <p>Lorem ipsum dolor </p>
     </Modal>
   </>
 }
@@ -51,12 +51,16 @@ export const SimpleModal = () => {
 
 export const OffCanvasModal = () => {
   const [show, setShow] = useState(false)
+  const [showBtm, setShowBtm] = useState(false)
 
   return <>
     <Button title='Open Left Off Canvas' onClick={() => setShow(true)} type="fill" />
     <br />
     <br />
     <Button title='Open Right Off Canvas' onClick={() => setShow(true)} type="fill" />
+    <br />
+    <br />
+    <Button title='Open Bottom Canvas' onClick={() => setShowBtm(true)} type="fill" />
 
     <OffCanvas
       title='Left Modal'
@@ -72,6 +76,16 @@ export const OffCanvasModal = () => {
       position='right'
       show={show}
       setShow={setShow}
+    >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
+    </OffCanvas>
+
+    <OffCanvas
+      title='Bottom Modal'
+      hideHeader
+      position='bottom'
+      show={showBtm}
+      setShow={setShowBtm}
     >
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>
     </OffCanvas>
