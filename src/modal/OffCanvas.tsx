@@ -7,13 +7,14 @@ interface iCanvas {
     show: boolean
     setShow: React.Dispatch<React.SetStateAction<boolean>>
     position?: "left" | "right" | "bottom"
+    className?: string
     bodyClassName?: string
     onClose?: () => void
 }
 
-export default function OffCanvas({ show, title, hideHeader = false, setShow, onClose = () => { }, position = "left", bodyClassName = "", children }: iCanvas) {
+export default function OffCanvas({ show, title, hideHeader = false, setShow, onClose = () => { }, position = "left", className = "", bodyClassName = "", children }: iCanvas) {
 
-    const common = "rm-fixed rm-bottom-0 rm-flex rm-flex-col rm-max-w-full rm-bg-white  rm-bg-clip-padding  rm-outline-none rm-transition rm-duration-500 rm-ease-in-out rm-text-gray-700 rm-top-0 rm-border-none rm-w-64 md:rm-w-80 rm-shadow-xl rm-z-[1200]"
+    const common = `rm-fixed rm-bottom-0 rm-flex rm-flex-col rm-max-w-full rm-bg-white  rm-bg-clip-padding  rm-outline-none rm-transition rm-duration-500 rm-ease-in-out rm-text-gray-700 rm-top-0 rm-border-none rm-w-64 md:rm-w-80 rm-shadow-xl rm-z-[1200] ${className}`
 
     const left_show_class = `${common} rm-translate-x-0  rm-left-0 `
     const left_hide_class = `${common} -rm-translate-x-full rm-left-0 `
@@ -47,7 +48,7 @@ export default function OffCanvas({ show, title, hideHeader = false, setShow, on
                     </>
                 }
 
-                <div className={`rm-${position}-body rm-offcanvas-body rm-flex-grow rm-p-4 rm-overflow-y-auto ${bodyClassName}`}>
+                <div className={`rm-${position}-body rm-flex-grow rm-p-4 rm-overflow-y-auto ${bodyClassName}`}>
                     {children}
                 </div>
             </div>
