@@ -54,7 +54,7 @@ export default function OffCanvas({ show, title, hideHeader = false, dismissable
                 </div>
             </div>
 
-            <div className={show === true ? "rm-w-screen rm-h-screen rm-bg-black rm-bg-opacity-30 rm-absolute rm-top-0 rm-left-0" : ""} onClick={() => {
+            <div className={show === true ? "rm-w-screen rm-h-screen rm-bg-black rm-bg-opacity-30 rm-fixed rm-inset-0" : ""} onClick={() => {
                 if (dismissable) {
                     hide()
                 } else {
