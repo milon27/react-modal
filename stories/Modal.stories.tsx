@@ -75,6 +75,7 @@ export const OffCanvasModal = () => {
       title='Right Modal'
       position='right'
       show={show}
+      dismissable
       setShow={setShow}
     >
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione omnis laborum maxime blanditiis rem iusto. Nostrum est eligendi aliquid nulla eaque, reprehenderit aliquam ratione cumque, excepturi magnam libero labore vero?</p>

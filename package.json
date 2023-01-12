@@ -19,7 +19,7 @@
         "prepare": "npm run build",
         "size": "size-limit",
         "analyze": "size-limit --why",
-        "storybook": "start-storybook -p 6006",
+        "dev": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
         "pub": "npm publish --access public"
     },

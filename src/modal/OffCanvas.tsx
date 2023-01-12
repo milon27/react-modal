@@ -3,6 +3,7 @@ import React from 'react'
 interface iCanvas {
     title: string,
     hideHeader?: boolean
+    dismissable?: boolean
     children: React.ReactNode
     show: boolean
     setShow: React.Dispatch<React.SetStateAction<boolean>>
@@ -12,7 +13,7 @@ interface iCanvas {
     onClose?: () => void
 }
 
-export default function OffCanvas({ show, title, hideHeader = false, setShow, onClose = () => { }, position = "left", className = "", bodyClassName = "", children }: iCanvas) {
+export default function OffCanvas({ show, title, hideHeader = false, dismissable = false, setShow, onClose = () => { }, position = "left", className = "", bodyClassName = "", children }: iCanvas) {
 
     const common = `rm-fixed rm-bottom-0 rm-flex rm-flex-col rm-max-w-full rm-bg-white  rm-bg-clip-padding  rm-outline-none rm-transition rm-duration-500 rm-ease-in-out rm-text-gray-700 rm-top-0 rm-border-none rm-w-64 md:rm-w-80 rm-shadow-xl rm-z-[1200] ${className}`
 
@@ -53,7 +54,13 @@ export default function OffCanvas({ show, title, hideHeader = false, setShow, on
                 </div>
             </div>
 
-            <div className={show === true ? "rm-w-screen rm-h-screen rm-bg-black rm-bg-opacity-30 rm-absolute rm-top-0 rm-left-0" : ""} onClick={hide}></div>
+            <div className={show === true ? "rm-w-screen rm-h-screen rm-bg-black rm-bg-opacity-30 rm-absolute rm-top-0 rm-left-0" : ""} onClick={() => {
+                if (dismissable) {
+                    hide()
+                } else {
+                    // do nothing
+                }
+            }}></div>
         </>
 
     )
