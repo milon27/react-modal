@@ -24,7 +24,7 @@ export default function OffCanvas({ show, title, hideHeader = false, dismissable
     const right_hide_class = `${common} rm-translate-x-full rm-right-0 `
 
     const bottom_show_class = `${common} rm-translate-y-0  rm-right-0 rm-w-full md:rm-w-full rm-mt-[10vh]`
-    const bottom_hide_class = `${common} rm-translate-y-full rm-right-0 rm-w-full md:rm-w-full rm-mt-[10vh]`
+    const bottom_hide_class = `${common} rm-translate-y-[120%] rm-right-0 rm-w-full md:rm-w-full rm-mt-[10vh]`
 
     const show_class = (position === "left") ? left_show_class : (position === "right") ? right_show_class : bottom_show_class;
     const hide_class = (position === "left") ? left_hide_class : (position === "right") ? right_hide_class : bottom_hide_class;
